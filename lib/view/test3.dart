@@ -121,60 +121,24 @@ class _WebTest3PageState extends State<WebTest3Page> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.all(50.0),
-        child: Column(
-          children: <Widget>[
-            // ステータスメッセージ
-            Text(
-              _statusMessage(),
-              style: const TextStyle(
-                color: Colors.blue,
-                fontSize: 40.0,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            // 縦スペース
-            const SizedBox(
-              height: 30,
-            ),
-            // 2つのボタン
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                // 録音ボタン
-                TextButton(
-                  onPressed: _recordingHandle,
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.lightBlue,
-                  ),
-                  child: Text(
-                    _recordingStatus ? "停止" : '録音',
-                    style: const TextStyle(color: Colors.white, fontSize: 20.0),
-                  ),
-                ),
-                // 再生ボタン
-                SizedBox(
-                  height: 50, // ボタンのサイズ調整
-                  child: ElevatedButton(
-                    onPressed: () {
-                      _playingHandle();
-                    },
-                    style: ElevatedButton.styleFrom(
-                      shape: const CircleBorder(),
-                      primary: Colors.lightBlue,
-                    ),
-                    child: _playingStatus
-                        ? const Icon(Icons.stop)
-                        : const Icon(Icons.play_arrow),
-                  ),
-                ),
-              ],
-            ),
-          ],
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        // 録音ボタン
+        TextButton(
+          onPressed: _recordingHandle,
+          child: Text(_recordingStatus ? "停止" : '録音テスト'),
         ),
-      ),
+        // 再生ボタン
+        ElevatedButton(
+          onPressed: () {
+            _playingHandle();
+          },
+          child: _playingStatus
+              ? const Icon(Icons.stop)
+              : const Icon(Icons.play_arrow),
+        ),
+      ],
     );
   }
 }

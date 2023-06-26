@@ -47,7 +47,7 @@ android {
         
         // 追加
         compileSdkVersion 33
-        minSdkVersion 19
+        minSdkVersion 21
 
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()

@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'MyChat',
-      home: WebTest3Page(),
+      home: WebTestPage(),
     );
   }
 }
