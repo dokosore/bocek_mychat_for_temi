@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-class MyChatPage extends StatefulWidget {
-  const MyChatPage({Key? key}) : super(key: key);
+class WebTestPage extends StatefulWidget {
+  const WebTestPage({Key? key}) : super(key: key);
   @override
-  State<MyChatPage> createState() => _MyChatPageState();
+  State<WebTestPage> createState() => _WebTestPageState();
 }
 
-class _MyChatPageState extends State<MyChatPage> {
+class _WebTestPageState extends State<WebTestPage> {
   final GlobalKey webViewKey = GlobalKey();
 
   InAppWebViewController? webViewController;
