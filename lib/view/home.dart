@@ -39,7 +39,7 @@ class _MyChatPageState extends State<MyChatPage> {
     getPermission();
   }
 
-  final webviewUrl = 'https://mychat.bocek.co.jp/';
+  final webviewUrl = 'https://anychat.bocek.co.jp/';
 
   @override
   Widget build(BuildContext context) {
